@@ -1,0 +1,3052 @@
+Index: app/src/main/res/layout/whole.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/whole.xml b/app/src/main/res/layout/whole.xml
+new file mode 100644
+--- /dev/null	(date 1643149847043)
++++ b/app/src/main/res/layout/whole.xml	(date 1643149847043)
+@@ -0,0 +1,45 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++
++    <ProgressBar
++        android:layout_width="match_parent"
++        android:id="@+id/progress_icon"
++        android:visibility="visible"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center_vertical"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        />
++
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/recyclerView"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        app:backgroundTint="#84F1D8"
++        app:layout_constraintBottom_toTopOf="@id/yodo1_mas_banner"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++    </androidx.recyclerview.widget.RecyclerView>
++
++    <com.yodo1.mas.banner.Yodo1MasBannerAdView
++        xmlns:masads="http://schemas.android.com/apk/res-auto"
++        android:id="@+id/yodo1_mas_banner"
++        android:layout_width="match_parent"
++        android:layout_height="80dp"
++        android:layout_weight="0"
++        android:layout_gravity="center_horizontal"
++        masads:adSize="Banner"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/recyclerView"/>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/danger.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/danger.xml b/app/src/main/res/layout/danger.xml
+new file mode 100644
+--- /dev/null	(date 1643153294658)
++++ b/app/src/main/res/layout/danger.xml	(date 1643153294658)
+@@ -0,0 +1,99 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.cardview.widget.CardView
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:backgroundTint="#D6D6D6D6"
++    app:cardCornerRadius="20dp">
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="vertical">
++
++        <TextView
++            android:id="@+id/maintain"
++            android:layout_width="match_parent"
++            android:textColor="@color/black"
++            android:textSize="24sp"
++            android:gravity="center"
++            android:textStyle="bold"
++            android:layout_marginTop="32dp"
++            android:layout_marginBottom="16dp"
++            android:fontFamily="@font/choco"
++            android:layout_height="wrap_content"
++            android:text="UNDER MAINTENANCE" />
++
++        <TextView
++            android:id="@+id/textView2"
++            android:layout_width="match_parent"
++            android:layout_marginStart="20dp"
++            android:layout_marginEnd="20dp"
++            android:textSize="16sp"
++            android:textAlignment="center"
++            android:layout_height="wrap_content"
++            android:text="Due to copyright issue this section has been blocked. New non copyright books will be updated soon." />
++
++        <TextView
++            android:id="@+id/textView3"
++            android:layout_marginTop="10dp"
++            android:layout_marginStart="20dp"
++            android:layout_marginEnd="20dp"
++            android:textSize="16sp"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:textAlignment="center"
++            android:textStyle="bold"
++            android:text="STAY CONNECTED! Please support us by RATING THIS APP." />
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="horizontal"
++            android:layout_margin="20dp">
++
++            <Button
++                android:id="@+id/Back"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_gravity="center"
++                android:layout_marginStart="20dp"
++                android:layout_marginEnd="10dp"
++                android:layout_weight="1"
++                android:gravity="center"
++                android:background="@drawable/rounded_button1"
++                android:backgroundTint="#AF3FA9"
++                android:textColor="@color/black"
++                android:elevation="20dp"
++                android:text="BACK" />
++
++            <Button
++                android:id="@+id/Review"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="10dp"
++                android:layout_marginEnd="20dp"
++                android:textColor="@color/black"
++                android:elevation="20dp"
++                android:background="@drawable/rounded_button1"
++                android:backgroundTint="#AF3FA9"
++                android:layout_weight="1"
++                android:text="Review" />
++        </LinearLayout>
++        <com.yodo1.mas.banner.Yodo1MasBannerAdView
++            xmlns:masads="http://schemas.android.com/apk/res-auto"
++            android:id="@+id/yodo1_mas_banner"
++            android:layout_width="match_parent"
++            android:layout_height="80dp"
++            android:layout_weight="0"
++            android:layout_gravity="center_horizontal"
++            masads:adSize="Banner"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"/>
++    </LinearLayout>
++
++</androidx.cardview.widget.CardView>
+\ No newline at end of file
+Index: app/src/main/res/layout/firebase_all.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/firebase_all.xml b/app/src/main/res/layout/firebase_all.xml
+new file mode 100644
+--- /dev/null	(date 1643306877655)
++++ b/app/src/main/res/layout/firebase_all.xml	(date 1643306877655)
+@@ -0,0 +1,45 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++
++    <ProgressBar
++        android:layout_width="match_parent"
++        android:id="@+id/progress_icon"
++        android:visibility="visible"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center_vertical"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        />
++
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/recyclerView"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        app:backgroundTint="#84F1D8"
++        app:layout_constraintBottom_toTopOf="@id/yodo1_mas_banner"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++    </androidx.recyclerview.widget.RecyclerView>
++
++    <com.yodo1.mas.banner.Yodo1MasBannerAdView
++        xmlns:masads="http://schemas.android.com/apk/res-auto"
++        android:id="@+id/yodo1_mas_banner"
++        android:layout_width="match_parent"
++        android:layout_height="80dp"
++        android:layout_weight="0"
++        android:layout_gravity="center_horizontal"
++        masads:adSize="Banner"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/recyclerView"/>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/firebase_all_btn.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/firebase_all_btn.xml b/app/src/main/res/layout/firebase_all_btn.xml
+new file mode 100644
+--- /dev/null	(date 1643306380142)
++++ b/app/src/main/res/layout/firebase_all_btn.xml	(date 1643306380142)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.cardview.widget.CardView
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:layout_marginStart="10dp"
++    android:layout_gravity="center"
++    android:layout_marginEnd="10dp"
++    app:cardCornerRadius="5dp"
++    android:elevation="8dp"
++    android:backgroundTint="#D6D6D6"
++    app:cardUseCompatPadding="true">
++
++
++    <RelativeLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_margin="5dp"
++        android:layout_gravity="center"
++        android:id="@+id/relative">
++
++
++        <TextView
++            android:id="@+id/category_name"
++            android:layout_width="match_parent"
++            android:layout_height="85dp"
++            android:layout_marginLeft="5dp"
++            android:layout_marginRight="5dp"
++            android:padding="8dp"
++            android:text="title"
++            android:gravity="center"
++            android:layout_marginTop="5dp"
++            android:fontFamily="@font/choco"
++            android:textSize="24sp"
++            android:textColor="@color/black"
++            app:backgroundTint="#D6D6D6"
++            style="bold" />
++
++
++        <androidx.recyclerview.widget.RecyclerView
++            android:id="@+id/recyclerView"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            />
++    </RelativeLayout>
++
++
++</androidx.cardview.widget.CardView>
++
++
+Index: app/src/main/res/layout/fragment_el1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_el1.xml b/app/src/main/res/layout/fragment_el1.xml
+--- a/app/src/main/res/layout/fragment_el1.xml	(date 1643148226273)
++++ b/app/src/main/res/layout/fragment_el1.xml	(date 1643148226273)
+@@ -25,7 +25,7 @@
+                 android:layout_marginRight="5dp"
+                 android:background="@drawable/rounded_button1"
+                 android:fontFamily="@font/choco"
+-                android:text="1st YEAR"
++                android:text="1st SEM"
+                 android:backgroundTint="#84F1D8"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+@@ -41,7 +41,7 @@
+                 android:layout_marginLeft="5dp"
+                 android:backgroundTint="#84F1D8"
+                 android:fontFamily="@font/choco"
+-                android:text="2nd YEAR"
++                android:text="2nd SEM"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+                 android:textSize="30sp"/>
+Index: app/src/main/res/layout/fragment_book.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_book.xml b/app/src/main/res/layout/fragment_book.xml
+--- a/app/src/main/res/layout/fragment_book.xml	(date 1643280088136)
++++ b/app/src/main/res/layout/fragment_book.xml	(date 1643280088136)
+@@ -3,6 +3,7 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     tools:context=".book">
+ 
+     <ScrollView
+@@ -23,6 +24,71 @@
+                 android:layout_height="wrap_content"
+ 
+                 />
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                app:cardCornerRadius="10dp"
++                android:layout_margin="16dp"
++                android:backgroundTint="#D1ACFD"
++                android:id="@+id/wholebtn"
++                >
++
++                <RelativeLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:gravity="center"
++                    >
++
++                    <ImageView
++                        android:layout_width="80dp"
++                        android:id="@+id/img1"
++                        android:layout_marginStart="10dp"
++                        android:layout_height="match_parent"
++
++
++                        android:src="@drawable/no_internet">
++
++                    </ImageView>
++
++                    <RelativeLayout
++                        android:layout_width="wrap_content"
++                        android:layout_height="match_parent"
++                        android:layout_toRightOf="@id/img1"
++                        android:gravity="center_vertical">
++
++                        <TextView
++                            android:id="@+id/topic"
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:layout_marginStart="16dp"
++                            android:layout_marginEnd="16dp"
++                            android:layout_marginBottom="5dp"
++
++                            android:text="Title"
++                            android:textColor="@color/black"
++                            android:textSize="18dp"
++                            android:textStyle="bold">
++
++                        </TextView>
++
++                        <TextView
++                            android:id="@+id/subtopic"
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:layout_below="@+id/topic"
++                            android:layout_marginStart="16dp"
++                            android:layout_marginEnd="16dp"
++                            android:text="Subtopic"
++                            android:textColor="@color/black"
++                            android:textSize="16sp">
++
++                        </TextView>
++                    </RelativeLayout>
++                </RelativeLayout>
++
++            </androidx.cardview.widget.CardView>
++
+             <LinearLayout
+                 android:id="@+id/lay1"
+                 android:layout_width="match_parent"
+Index: app/src/main/res/layout/fragment_civ1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_civ1.xml b/app/src/main/res/layout/fragment_civ1.xml
+--- a/app/src/main/res/layout/fragment_civ1.xml	(date 1643148226326)
++++ b/app/src/main/res/layout/fragment_civ1.xml	(date 1643148226326)
+@@ -24,7 +24,7 @@
+                 android:layout_marginRight="5dp"
+                 android:background="@drawable/rounded_button1"
+                 android:fontFamily="@font/choco"
+-                android:text="1st sem"
++                android:text="1st SEM"
+                 android:backgroundTint="#84F1D8"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+@@ -40,7 +40,7 @@
+                 android:layout_marginLeft="5dp"
+                 android:backgroundTint="#84F1D8"
+                 android:fontFamily="@font/choco"
+-                android:text="2nd sem"
++                android:text="2nd SEM"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+                 android:textSize="30sp"
+Index: app/src/main/res/layout/activity_main3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main3.xml b/app/src/main/res/layout/activity_main3.xml
+--- a/app/src/main/res/layout/activity_main3.xml	(date 1643147215753)
++++ b/app/src/main/res/layout/activity_main3.xml	(date 1643147215753)
+@@ -90,16 +90,16 @@
+ 
+         </LinearLayout>
+     </ScrollView>
+-    <com.google.android.gms.ads.AdView
+-        android:id="@+id/adView"
++    <com.yodo1.mas.banner.Yodo1MasBannerAdView
++        xmlns:masads="http://schemas.android.com/apk/res-auto"
++        android:id="@+id/yodo1_mas_banner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0"
+         android:layout_gravity="center_horizontal"
+-        app:adSize="BANNER"
+-        app:adUnitId="@string/ad_unit_id"
++        masads:adSize="Banner"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintTop_toTopOf="parent"/>
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main4.xml b/app/src/main/res/layout/activity_main4.xml
+--- a/app/src/main/res/layout/activity_main4.xml	(date 1643146581794)
++++ b/app/src/main/res/layout/activity_main4.xml	(date 1643146581794)
+@@ -91,16 +91,16 @@
+ 
+         </LinearLayout>
+     </ScrollView>
+-    <com.google.android.gms.ads.AdView
+-        android:id="@+id/adView"
++    <com.yodo1.mas.banner.Yodo1MasBannerAdView
++        xmlns:masads="http://schemas.android.com/apk/res-auto"
++        android:id="@+id/yodo1_mas_banner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0"
+         android:layout_gravity="center_horizontal"
+-        app:adSize="BANNER"
+-        app:adUnitId="@string/ad_unit_id"
++        masads:adSize="Banner"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintTop_toTopOf="parent"/>
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_blank.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_blank.xml b/app/src/main/res/layout/fragment_blank.xml
+--- a/app/src/main/res/layout/fragment_blank.xml	(date 1643146581775)
++++ b/app/src/main/res/layout/fragment_blank.xml	(date 1643146581775)
+@@ -27,7 +27,7 @@
+                 android:layout_marginRight="5dp"
+                 android:background="@drawable/rounded_button1"
+                 android:fontFamily="@font/choco"
+-                android:text="1st YEAR"
++                android:text="1st SEM"
+                 android:backgroundTint="#84F1D8"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+@@ -43,7 +43,7 @@
+                 android:layout_marginLeft="5dp"
+                 android:backgroundTint="#84F1D8"
+                 android:fontFamily="@font/choco"
+-                android:text="2nd YEAR"
++                android:text="2nd SEM"
+                 android:textAlignment="center"
+                 android:textColor="#ff000000"
+                 android:textSize="30sp"
+Index: app/src/main/java/com/gap/mobigpk1/Model/firebase_model_all.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/Model/firebase_model_all.java b/app/src/main/java/com/gap/mobigpk1/Model/firebase_model_all.java
+new file mode 100644
+--- /dev/null	(date 1643306221688)
++++ b/app/src/main/java/com/gap/mobigpk1/Model/firebase_model_all.java	(date 1643306221688)
+@@ -0,0 +1,30 @@
++package com.gap.mobigpk1.Model;
++
++public class firebase_model_all {
++    private String title;
++    private String link;
++
++    public firebase_model_all(){
++    }
++
++    public firebase_model_all(String title, String link) {
++        this.title = title;
++        this.link = link;
++    }
++
++    public String getTitle() {
++        return title;
++    }
++
++    public void setTitle(String title) {
++        this.title = title;
++    }
++
++    public String getLink() {
++        return link;
++    }
++
++    public void setLink(String link) {
++        this.link = link;
++    }
++}
+Index: app/src/main/java/com/gap/mobigpk1/el1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el1.java b/app/src/main/java/com/gap/mobigpk1/el1.java
+--- a/app/src/main/java/com/gap/mobigpk1/el1.java	(date 1643142888196)
++++ b/app/src/main/java/com/gap/mobigpk1/el1.java	(date 1643142888196)
+@@ -22,7 +22,7 @@
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                Intent intent=new Intent(getActivity(),el11.class);
++                Intent intent=new Intent(getActivity(),me11.class);
+                 startActivity(intent);
+             }
+         });
+Index: app/src/main/java/com/gap/mobigpk1/book.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/book.java b/app/src/main/java/com/gap/mobigpk1/book.java
+--- a/app/src/main/java/com/gap/mobigpk1/book.java	(date 1643306221641)
++++ b/app/src/main/java/com/gap/mobigpk1/book.java	(date 1643306221641)
+@@ -4,18 +4,28 @@
+ import android.content.Context;
+ import android.content.Intent;
+ import android.net.ConnectivityManager;
++import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.widget.Button;
++import android.widget.TextView;
+ import android.widget.Toast;
+ 
++import androidx.annotation.NonNull;
++import androidx.cardview.widget.CardView;
+ import androidx.fragment.app.Fragment;
+ import androidx.recyclerview.widget.LinearLayoutManager;
+ import androidx.recyclerview.widget.LinearSnapHelper;
+ import androidx.recyclerview.widget.RecyclerView;
+ 
++import com.google.firebase.database.DataSnapshot;
++import com.google.firebase.database.DatabaseError;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.google.firebase.database.ValueEventListener;
++
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.Timer;
+@@ -27,7 +37,7 @@
+  * create an instance of this fragment.
+  *
+  */
+-public class book extends Fragment {
++public class book extends Fragment implements ValueEventListener {
+ 
+     // TODO: Rename parameter arguments, choose names that match
+     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+@@ -40,8 +50,18 @@
+     RecyclerView slide;
+     AutoScroll autoScrollAdapter;
+     LinearLayoutManager layoutManager;
++    FirebaseDatabase database=FirebaseDatabase.getInstance();
++    DatabaseReference reference=database.getReference();
++    DatabaseReference  top=reference.child("topic");
++    DatabaseReference  stop=reference.child("subtopic");
++    DatabaseReference  link=reference.child("link");
++    String s;
++    private CardView btn;
++    private TextView topic;
++    private  TextView subTop;
+     private Dialog progressDialog;
+ 
++
+     /**
+      * Use this factory method to create a new instance of
+      * this fragment using the provided parameters.
+@@ -111,6 +131,17 @@
+             //    Toast.makeText(getActivity(),"No Internet Access",Toast.LENGTH_LONG).show();
+         }
+ 
++        topic=v.findViewById(R.id.topic);
++        subTop=v.findViewById(R.id.subtopic);
++        btn=v.findViewById(R.id.wholebtn);
++
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
++                startActivity(intent);
++            }
++        });
+         Button button1 = v.findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+@@ -160,6 +191,9 @@
+         setRV();
+         return v;
+     }
++
++
++
+     private void setRV(){
+         layoutManager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+         slide.setLayoutManager(layoutManager);
+@@ -189,4 +223,35 @@
+ 
+ 
+     }
++
++    @Override
++    public void onDataChange(@NonNull DataSnapshot snapshot) {
++        if(snapshot.getValue()!=null){
++            String key= snapshot.getKey();
++            if(key.equals("topic")){
++                topic.setText(snapshot.getValue(String.class));
++            }
++            if(key.equals("subtopic")){
++                subTop.setText(snapshot.getValue(String.class));
++            }
++            if(key.equals("link")){
++                 s=snapshot.getValue(String.class);
++
++            }
++        }
++    }
++
++    @Override
++    public void onCancelled(@NonNull DatabaseError error) {
++
++    }
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        top.addValueEventListener(this);
++        stop.addValueEventListener(this);
++        link.addValueEventListener(this);
++
++    }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/gap/mobigpk1/civ1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ1.java b/app/src/main/java/com/gap/mobigpk1/civ1.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ1.java	(date 1643142888202)
++++ b/app/src/main/java/com/gap/mobigpk1/civ1.java	(date 1643142888202)
+@@ -22,7 +22,7 @@
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                Intent intent=new Intent(getActivity(),civ11.class);
++                Intent intent=new Intent(getActivity(),me11.class);
+                 startActivity(intent);
+             }
+         });
+Index: app/src/main/java/com/gap/mobigpk1/el12.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el12.java b/app/src/main/java/com/gap/mobigpk1/el12.java
+--- a/app/src/main/java/com/gap/mobigpk1/el12.java	(date 1643153789291)
++++ b/app/src/main/java/com/gap/mobigpk1/el12.java	(date 1643153789291)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class el12 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,16 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_el12);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(el12.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
+             }
+         });
++        bannerAdView.loadAd();
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
+ 
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
++            }
++        });
++
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+Index: app/src/main/java/com/gap/mobigpk1/el21.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el21.java b/app/src/main/java/com/gap/mobigpk1/el21.java
+--- a/app/src/main/java/com/gap/mobigpk1/el21.java	(date 1643306877623)
++++ b/app/src/main/java/com/gap/mobigpk1/el21.java	(date 1643306877623)
+@@ -1,20 +1,120 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
++import android.widget.Toast;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class el21 extends AppCompatActivity {
++    RecyclerView recyclerView;
++    firebaseAdapter adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++    private Yodo1MasBannerAdView bannerAdView;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.firebase_all);
++
++        bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++                Toast.makeText(el21.this,"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++                Toast.makeText(el21.this,"Please wait! Connecting to ",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++                Toast.makeText(el21.this,"Please wait! Connecting",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++                Toast.makeText(el21.this,"Please wait!",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++                Toast.makeText(el21.this,"Please ", Toast.LENGTH_LONG).show();
++            }
++        });
++        bannerAdView.loadAd();
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("EE21");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<firebase_model_all> options = new FirebaseRecyclerOptions.Builder<firebase_model_all>()
++                .setQuery(reference, firebase_model_all.class)
++                .build();
++
++        adapter = new firebaseAdapter(options);
++        recyclerView.setAdapter(adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        adapter.stopListening();
++    }
++
++        
++    
++    /*
+     private AdView mAdView;
+ 
+     @Override
+@@ -73,4 +173,6 @@
+             }
+         });
+     }
++    
++     */
+ }
+Index: app/src/main/java/com/gap/mobigpk1/el22.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el22.java b/app/src/main/java/com/gap/mobigpk1/el22.java
+--- a/app/src/main/java/com/gap/mobigpk1/el22.java	(date 1643153789486)
++++ b/app/src/main/java/com/gap/mobigpk1/el22.java	(date 1643153789486)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class el22 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,15 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_el22);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(el22.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/el31.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el31.java b/app/src/main/java/com/gap/mobigpk1/el31.java
+--- a/app/src/main/java/com/gap/mobigpk1/el31.java	(date 1643306910340)
++++ b/app/src/main/java/com/gap/mobigpk1/el31.java	(date 1643306910340)
+@@ -1,20 +1,120 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
++import android.widget.Toast;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class el31 extends AppCompatActivity {
++    RecyclerView recyclerView;
++    firebaseAdapter adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++    private Yodo1MasBannerAdView bannerAdView;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.firebase_all);
++
++        bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++                Toast.makeText(el31.this,"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++                Toast.makeText(el31.this,"Please wait! Connecting to ",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++                Toast.makeText(el31.this,"Please wait! Connecting",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++                Toast.makeText(el31.this,"Please wait!",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++                Toast.makeText(el31.this,"Please ", Toast.LENGTH_LONG).show();
++            }
++        });
++        bannerAdView.loadAd();
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("EE31");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<firebase_model_all> options = new FirebaseRecyclerOptions.Builder<firebase_model_all>()
++                .setQuery(reference, firebase_model_all.class)
++                .build();
++
++        adapter = new firebaseAdapter(options);
++        recyclerView.setAdapter(adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        adapter.stopListening();
++    }
++
++
++
++    /*
+     private AdView mAdView;
+ 
+     @Override
+@@ -73,4 +173,6 @@
+             }
+         });
+     }
++    
++     */
+ }
+Index: app/src/main/java/com/gap/mobigpk1/el32.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/el32.java b/app/src/main/java/com/gap/mobigpk1/el32.java
+--- a/app/src/main/java/com/gap/mobigpk1/el32.java	(date 1643153789413)
++++ b/app/src/main/java/com/gap/mobigpk1/el32.java	(date 1643153789413)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class el32 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,15 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_el32);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(el32.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/me11.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me11.java b/app/src/main/java/com/gap/mobigpk1/me11.java
+--- a/app/src/main/java/com/gap/mobigpk1/me11.java	(date 1643306877647)
++++ b/app/src/main/java/com/gap/mobigpk1/me11.java	(date 1643306877647)
+@@ -2,32 +2,123 @@
+ 
+ import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+ import android.content.SharedPreferences;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
+ import android.widget.Toast;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+-import com.yodo1.mas.Yodo1Mas;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
+ import com.yodo1.mas.error.Yodo1MasError;
+-import com.yodo1.mas.event.Yodo1MasAdEvent;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class me11 extends AppCompatActivity {
+ 
+     SharedPreferences sharedPreferences;
++    RecyclerView recyclerView;
++    firebaseAdapter adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++    private Yodo1MasBannerAdView bannerAdView;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_me11);
++        setContentView(R.layout.firebase_all);
++
++        bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++                Toast.makeText(me11.this,"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++                Toast.makeText(me11.this,"Please wait! Connecting to ",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++                Toast.makeText(me11.this,"Please wait! Connecting",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++                Toast.makeText(me11.this,"Please wait!",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++                Toast.makeText(me11.this,"Please ", Toast.LENGTH_LONG).show();
++            }
++        });
++        bannerAdView.loadAd();
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("ME11");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<firebase_model_all> options = new FirebaseRecyclerOptions.Builder<firebase_model_all>()
++                .setQuery(reference, firebase_model_all.class)
++                .build();
++
++        adapter = new firebaseAdapter(options);
++        recyclerView.setAdapter(adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        adapter.stopListening();
++    }
++
++        
++
++
++        /*
+         sharedPreferences = getSharedPreferences("FIRSTRUN",MODE_PRIVATE);
+ 
+ 
+@@ -115,5 +206,7 @@
+     private boolean check(){
+         String value = sharedPreferences.getString("Language","H");
+         return !value.equals("H");
++
++         */
+     }
+-}
++
+Index: app/src/main/java/com/gap/mobigpk1/me12.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me12.java b/app/src/main/java/com/gap/mobigpk1/me12.java
+--- a/app/src/main/java/com/gap/mobigpk1/me12.java	(date 1643226194236)
++++ b/app/src/main/java/com/gap/mobigpk1/me12.java	(date 1643226194236)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,24 +16,79 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class me12 extends AppCompatActivity {
+-    private AdView mAdView;
++    private Dialog progressDialog;
++
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_me12);
+ 
++        progressDialog=new Dialog(me12.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
++            }
++        });
++
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
++
+         MobileAds.initialize(this, new OnInitializationCompleteListener() {
+             @Override
+             public void onInitializationComplete(InitializationStatus initializationStatus) {
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/me21.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me21.java b/app/src/main/java/com/gap/mobigpk1/me21.java
+--- a/app/src/main/java/com/gap/mobigpk1/me21.java	(date 1643306877655)
++++ b/app/src/main/java/com/gap/mobigpk1/me21.java	(date 1643306877655)
+@@ -1,27 +1,121 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
++import android.widget.Toast;
+ 
+-import com.google.android.gms.ads.AdRequest;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
+ import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class me21 extends AppCompatActivity {
+-    private AdView mAdView;
++    RecyclerView recyclerView;
++    firebaseAdapter adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++    private Yodo1MasBannerAdView bannerAdView;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_me21);
++        setContentView(R.layout.firebase_all);
++
++        bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++                Toast.makeText(me21.this,"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
+ 
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++                Toast.makeText(me21.this,"Please wait! Connecting to ",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++                Toast.makeText(me21.this,"Please wait! Connecting",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++                Toast.makeText(me21.this,"Please wait!",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++                Toast.makeText(me21.this,"Please ", Toast.LENGTH_LONG).show();
++            }
++        });
++        bannerAdView.loadAd();
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("ME21");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<firebase_model_all> options = new FirebaseRecyclerOptions.Builder<firebase_model_all>()
++                .setQuery(reference, firebase_model_all.class)
++                .build();
++
++        adapter = new firebaseAdapter(options);
++        recyclerView.setAdapter(adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        adapter.stopListening();
++    }
++
++        
++
++        /*
+         MobileAds.initialize(this, new OnInitializationCompleteListener() {
+             @Override
+             public void onInitializationComplete(InitializationStatus initializationStatus) {
+@@ -73,5 +167,7 @@
+             }
+         });
+ 
++
++         */
+     }
+-}
++
+Index: app/src/main/java/com/gap/mobigpk1/me22.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me22.java b/app/src/main/java/com/gap/mobigpk1/me22.java
+--- a/app/src/main/java/com/gap/mobigpk1/me22.java	(date 1643153789448)
++++ b/app/src/main/java/com/gap/mobigpk1/me22.java	(date 1643153789448)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class me22 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,15 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_me22);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++        Dialog progressDialog = new Dialog(me22.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
+             }
+         });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
++            }
++        });
++
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
++
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+Index: app/src/main/java/com/gap/mobigpk1/me31.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me31.java b/app/src/main/java/com/gap/mobigpk1/me31.java
+--- a/app/src/main/java/com/gap/mobigpk1/me31.java	(date 1643306877639)
++++ b/app/src/main/java/com/gap/mobigpk1/me31.java	(date 1643306877639)
+@@ -1,20 +1,121 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
++import android.widget.Toast;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class me31 extends AppCompatActivity {
++
++    RecyclerView recyclerView;
++    firebaseAdapter adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++    private Yodo1MasBannerAdView bannerAdView;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.firebase_all);
++
++        bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++                Toast.makeText(me31.this,"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++                Toast.makeText(me31.this,"Please wait! Connecting to ",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++                Toast.makeText(me31.this,"Please wait! Connecting",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++                Toast.makeText(me31.this,"Please wait!",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++                Toast.makeText(me31.this,"Please ", Toast.LENGTH_LONG).show();
++            }
++        });
++        bannerAdView.loadAd();
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("ME31");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<firebase_model_all> options = new FirebaseRecyclerOptions.Builder<firebase_model_all>()
++                .setQuery(reference, firebase_model_all.class)
++                .build();
++
++        adapter = new firebaseAdapter(options);
++        recyclerView.setAdapter(adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        adapter.stopListening();
++    }
++
++        
++    
++    /*
+     private AdView mAdView;
+ 
+     @Override
+@@ -74,4 +175,6 @@
+         });
+ 
+     }
++    
++     */
+ }
+Index: app/src/main/java/com/gap/mobigpk1/me32.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/me32.java b/app/src/main/java/com/gap/mobigpk1/me32.java
+--- a/app/src/main/java/com/gap/mobigpk1/me32.java	(date 1643153789464)
++++ b/app/src/main/java/com/gap/mobigpk1/me32.java	(date 1643153789464)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class me32 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,16 +28,59 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_me32);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++        Dialog progressDialog = new Dialog(me32.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
+             }
+         });
++        bannerAdView.loadAd();
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
+ 
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
++            }
++        });
++
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+Index: app/src/main/java/com/gap/mobigpk1/civ12.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ12.java b/app/src/main/java/com/gap/mobigpk1/civ12.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ12.java	(date 1643153894140)
++++ b/app/src/main/java/com/gap/mobigpk1/civ12.java	(date 1643153894140)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class civ12 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,15 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_civ12);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(civ12.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/civ21.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ21.java b/app/src/main/java/com/gap/mobigpk1/civ21.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ21.java	(date 1643306221677)
++++ b/app/src/main/java/com/gap/mobigpk1/civ21.java	(date 1643306221677)
+@@ -1,20 +1,77 @@
+ package com.gap.mobigpk1;
+ 
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class civ21 extends AppCompatActivity {
++
++    RecyclerView recyclerView;
++    ME11Adapter me11Adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.whole);
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("CE21");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<me11_model> options = new FirebaseRecyclerOptions.Builder<me11_model>()
++                .setQuery(reference, me11_model.class)
++                .build();
++
++        me11Adapter = new ME11Adapter(options);
++        recyclerView.setAdapter(me11Adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        me11Adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        me11Adapter.stopListening();
++    }
++
++
++    /*
+     private AdView mAdView;
+ 
+     @Override
+@@ -81,4 +138,6 @@
+             }
+         });
+     }
++
++     */
+ }
+Index: app/src/main/java/com/gap/mobigpk1/civ22.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ22.java b/app/src/main/java/com/gap/mobigpk1/civ22.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ22.java	(date 1643153894130)
++++ b/app/src/main/java/com/gap/mobigpk1/civ22.java	(date 1643153894130)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class civ22 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -23,15 +29,60 @@
+         setContentView(R.layout.activity_civ22);
+ 
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(civ22.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/civ31.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ31.java b/app/src/main/java/com/gap/mobigpk1/civ31.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ31.java	(date 1643306221688)
++++ b/app/src/main/java/com/gap/mobigpk1/civ31.java	(date 1643306221688)
+@@ -1,20 +1,74 @@
+ package com.gap.mobigpk1;
+ 
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+-import android.content.Intent;
+-import android.net.Uri;
+ import android.os.Bundle;
++import android.os.CountDownTimer;
+ import android.view.View;
+-import android.widget.Button;
++import android.widget.ProgressBar;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-import com.google.android.gms.ads.MobileAds;
+-import com.google.android.gms.ads.initialization.InitializationStatus;
+-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++
++import java.util.concurrent.TimeUnit;
+ 
+ public class civ31 extends AppCompatActivity {
++    RecyclerView recyclerView;
++    ME11Adapter me11Adapter;
++    FirebaseDatabase database;
++    DatabaseReference reference;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.whole);
++
++
++        long duration = TimeUnit.SECONDS.toMillis(2);
++        new CountDownTimer(duration, 1000) {
++            @Override
++            public void onTick(long l) {
++                //Toast.makeText(getActivity(),"Please wait! Connecting to Internet",Toast.LENGTH_LONG).show();
++            }
++
++            @Override
++            public void onFinish() {
++                ProgressBar progress = findViewById(R.id.progress_icon);
++                progress.setVisibility(View.INVISIBLE);
++            }
++        }.start();
++
++        database = FirebaseDatabase.getInstance();
++        reference = database.getReference("CE31");
++
++        recyclerView = findViewById(R.id.recyclerView);
++        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
++        recyclerView.setLayoutManager(layoutManager);
++
++        FirebaseRecyclerOptions<me11_model> options = new FirebaseRecyclerOptions.Builder<me11_model>()
++                .setQuery(reference, me11_model.class)
++                .build();
++
++        me11Adapter = new ME11Adapter(options);
++        recyclerView.setAdapter(me11Adapter);
++    }
++
++
++    @Override
++    public void onStart() {
++        super.onStart();
++        me11Adapter.startListening();
++    }
++
++    @Override
++    public void onStop() {
++        super.onStop();
++        me11Adapter.stopListening();
++    }
++    /*
+     private AdView mAdView;
+ 
+     @Override
+@@ -81,4 +135,6 @@
+             }
+         });
+     }
++
++     */
+ }
+Index: app/src/main/java/com/gap/mobigpk1/civ32.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/civ32.java b/app/src/main/java/com/gap/mobigpk1/civ32.java
+--- a/app/src/main/java/com/gap/mobigpk1/civ32.java	(date 1643153894140)
++++ b/app/src/main/java/com/gap/mobigpk1/civ32.java	(date 1643153894140)
+@@ -1,11 +1,14 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.Dialog;
+ import android.content.Intent;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
++import android.view.ViewGroup;
+ import android.widget.Button;
+ 
+ import com.google.android.gms.ads.AdRequest;
+@@ -13,6 +16,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class civ32 extends AppCompatActivity {
+     private AdView mAdView;
+@@ -22,15 +28,60 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_civ32);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++
++        Dialog progressDialog = new Dialog(civ32.this);
++        progressDialog.setContentView(R.layout.danger);
++        progressDialog.setCancelable(false);
++
++        Yodo1MasBannerAdView bannerAdView=progressDialog.findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
++            @Override
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
++            }
++        });
++        bannerAdView.loadAd();
++
++        Button btn = progressDialog.findViewById(R.id.Back);
++        btn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++                finish();
++            }
++        });
++        Button btn2 = progressDialog.findViewById(R.id.Review);
++        btn2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gap.mobigpk1&hl=en")));
+             }
+         });
+ 
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
++        progressDialog.show();
+ 
+         Button button1 = findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/notes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/notes.java b/app/src/main/java/com/gap/mobigpk1/notes.java
+--- a/app/src/main/java/com/gap/mobigpk1/notes.java	(date 1643141948981)
++++ b/app/src/main/java/com/gap/mobigpk1/notes.java	(date 1643141948981)
+@@ -82,7 +82,7 @@
+     }
+     private boolean isConnected()
+     {
+-        ConnectivityManager connectivityManager = (ConnectivityManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CONNECTIVITY_SERVICE);
++        ConnectivityManager connectivityManager = (ConnectivityManager) requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+         return connectivityManager.getActiveNetworkInfo()!=null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting();
+     }
+ 
+@@ -92,7 +92,7 @@
+         // Inflate the layout for this fragment
+         View v=inflater.inflate(R.layout.fragment_notes, container, false);
+         nointernet = v.findViewById(R.id.nointernt);
+-        search=v.findViewById(R.id.searching);
++
+ 
+ 
+         if(!isConnected())
+@@ -115,7 +115,7 @@
+             //    Toast.makeText(getActivity(),"No Internet Access",Toast.LENGTH_LONG).show();
+         }
+ 
+-
++        search=v.findViewById(R.id.searching);
+         long duration= TimeUnit.SECONDS.toMillis(2);
+         new CountDownTimer(duration, 1000) {
+             @Override
+Index: app/src/main/java/com/gap/mobigpk1/EE21Adapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/EE21Adapter.java b/app/src/main/java/com/gap/mobigpk1/EE21Adapter.java
+new file mode 100644
+--- /dev/null	(date 1643306221657)
++++ b/app/src/main/java/com/gap/mobigpk1/EE21Adapter.java	(date 1643306221657)
+@@ -0,0 +1,61 @@
++package com.gap.mobigpk1;
++
++import android.content.Intent;
++import android.net.Uri;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.RelativeLayout;
++import android.widget.TextView;
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++
++import com.firebase.ui.database.FirebaseRecyclerAdapter;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++
++public class EE21Adapter extends FirebaseRecyclerAdapter<ee21_model, EE21Adapter.me11ViewHolder> {
++
++    public EE21Adapter(@NonNull FirebaseRecyclerOptions<ee21_model> options) {
++        super(options);
++    }
++
++    @Override
++    protected void onBindViewHolder(@NonNull me11ViewHolder ee21_modelViewHolder, int i, @NonNull  ee21_model ee21_model) {
++        ee21_modelViewHolder.categoryName.setText(ee21_model.getTitle());
++        ee21_modelViewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                AppCompatActivity activity=(AppCompatActivity) v.getContext();
++                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ee21_model.getLink1()));
++                activity.startActivity(intent);
++            }
++        });
++    }
++
++    @NonNull
++    @Override
++    public me11ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
++        View v1 = LayoutInflater.from(parent.getContext())
++                .inflate(R.layout.video_btn_firebase, parent, false);
++        return new me11ViewHolder(v1);
++    }
++
++    public static class me11ViewHolder extends RecyclerView.ViewHolder {
++        public TextView categoryName;
++        public RecyclerView category_recyclerView;
++        public RecyclerView.LayoutManager manager;
++        RelativeLayout relativeLayout;
++
++        public me11ViewHolder(@NonNull View itemView) {
++            super(itemView);
++            relativeLayout = itemView.findViewById(R.id.relative);
++            manager = new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false);
++            categoryName = itemView.findViewById(R.id.category_name);
++            category_recyclerView = itemView.findViewById(R.id.recyclerView);
++            category_recyclerView.setLayoutManager(manager);
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/gap/mobigpk1/EE31Adapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/EE31Adapter.java b/app/src/main/java/com/gap/mobigpk1/EE31Adapter.java
+new file mode 100644
+--- /dev/null	(date 1643306221704)
++++ b/app/src/main/java/com/gap/mobigpk1/EE31Adapter.java	(date 1643306221704)
+@@ -0,0 +1,61 @@
++package com.gap.mobigpk1;
++
++import android.content.Intent;
++import android.net.Uri;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.RelativeLayout;
++import android.widget.TextView;
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++
++import com.firebase.ui.database.FirebaseRecyclerAdapter;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++
++public class EE31Adapter extends FirebaseRecyclerAdapter<ee31_model, EE31Adapter.me11ViewHolder> {
++
++    public EE31Adapter(@NonNull FirebaseRecyclerOptions<ee31_model> options) {
++        super(options);
++    }
++
++    @Override
++    protected void onBindViewHolder(@NonNull me11ViewHolder ee31_modelViewHolder, int i, @NonNull  ee31_model ee31_model) {
++        ee31_modelViewHolder.categoryName.setText(ee31_model.getTitle());
++        ee31_modelViewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                AppCompatActivity activity=(AppCompatActivity) v.getContext();
++                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ee31_model.getLink1()));
++                activity.startActivity(intent);
++            }
++        });
++    }
++
++    @NonNull
++    @Override
++    public me11ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
++        View v1 = LayoutInflater.from(parent.getContext())
++                .inflate(R.layout.video_btn_firebase, parent, false);
++        return new me11ViewHolder(v1);
++    }
++
++    public static class me11ViewHolder extends RecyclerView.ViewHolder {
++        public TextView categoryName;
++        public RecyclerView category_recyclerView;
++        public RecyclerView.LayoutManager manager;
++        RelativeLayout relativeLayout;
++
++        public me11ViewHolder(@NonNull View itemView) {
++            super(itemView);
++            relativeLayout = itemView.findViewById(R.id.relative);
++            manager = new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false);
++            categoryName = itemView.findViewById(R.id.category_name);
++            category_recyclerView = itemView.findViewById(R.id.recyclerView);
++            category_recyclerView.setLayoutManager(manager);
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/gap/mobigpk1/firebaseAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/firebaseAdapter.java b/app/src/main/java/com/gap/mobigpk1/firebaseAdapter.java
+new file mode 100644
+--- /dev/null	(date 1643306255775)
++++ b/app/src/main/java/com/gap/mobigpk1/firebaseAdapter.java	(date 1643306255775)
+@@ -0,0 +1,90 @@
++package com.gap.mobigpk1;
++
++import android.content.Intent;
++import android.net.Uri;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.RelativeLayout;
++import android.widget.TextView;
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++
++import com.firebase.ui.database.FirebaseRecyclerAdapter;
++import com.firebase.ui.database.FirebaseRecyclerOptions;
++import com.gap.mobigpk1.Model.firebase_model_all;
++import com.yodo1.mas.Yodo1Mas;
++import com.yodo1.mas.error.Yodo1MasError;
++import com.yodo1.mas.event.Yodo1MasAdEvent;
++
++public class firebaseAdapter extends FirebaseRecyclerAdapter<firebase_model_all, firebaseAdapter.firebaseViewHolder> {
++
++    public firebaseAdapter(@NonNull FirebaseRecyclerOptions<firebase_model_all> options) {
++        super(options);
++    }
++
++    @Override
++    protected void onBindViewHolder(@NonNull firebaseViewHolder firebase_model_allViewHolder, int i, @NonNull  firebase_model_all firebase_model_all) {
++        firebase_model_allViewHolder.categoryName.setText(firebase_model_all.getTitle());
++
++        firebase_model_allViewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                AppCompatActivity activity=(AppCompatActivity) v.getContext();
++                Yodo1Mas.getInstance().showRewardedAd(activity);
++                Yodo1Mas.getInstance().setRewardListener(new Yodo1Mas.RewardListener() {
++                    @Override
++                    public void onAdOpened(@NonNull Yodo1MasAdEvent event) {
++
++                    }
++
++                    @Override
++                    public void onAdvertRewardEarned(@NonNull Yodo1MasAdEvent event) {
++
++                    }
++
++                    @Override
++                    public void onAdError(@NonNull Yodo1MasAdEvent event, @NonNull Yodo1MasError error) {
++
++                    }
++
++                    @Override
++                    public void onAdClosed(@NonNull Yodo1MasAdEvent event) {
++                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(firebase_model_all.getLink()));
++                        activity.startActivity(intent);
++
++                    }
++                });
++
++
++            }
++        });
++    }
++
++    @NonNull
++    @Override
++    public firebaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
++        View v1 = LayoutInflater.from(parent.getContext())
++                .inflate(R.layout.firebase_all_btn, parent, false);
++        return new firebaseViewHolder(v1);
++    }
++
++    public static class firebaseViewHolder extends RecyclerView.ViewHolder {
++        public TextView categoryName;
++        public RecyclerView category_recyclerView;
++        public RecyclerView.LayoutManager manager;
++        RelativeLayout relativeLayout;
++
++        public firebaseViewHolder(@NonNull View itemView) {
++            super(itemView);
++            relativeLayout = itemView.findViewById(R.id.relative);
++            manager = new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false);
++            categoryName = itemView.findViewById(R.id.category_name);
++            category_recyclerView = itemView.findViewById(R.id.recyclerView);
++            category_recyclerView.setLayoutManager(manager);
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/gap/mobigpk1/Main2Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/Main2Activity.java b/app/src/main/java/com/gap/mobigpk1/Main2Activity.java
+--- a/app/src/main/java/com/gap/mobigpk1/Main2Activity.java	(date 1643147677406)
++++ b/app/src/main/java/com/gap/mobigpk1/Main2Activity.java	(date 1643147677406)
+@@ -78,6 +78,7 @@
+                 transaction.commit();
+             }
+         });
++
+         button2=findViewById(R.id.btn2);
+         button2.setOnClickListener(new View.OnClickListener() {
+             @Override
+@@ -88,6 +89,7 @@
+                 transaction.commit();
+             }
+         });
++
+         button3=findViewById(R.id.btn3);
+         button3.setOnClickListener(new View.OnClickListener() {
+             @Override
+Index: app/src/main/java/com/gap/mobigpk1/Main3Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/Main3Activity.java b/app/src/main/java/com/gap/mobigpk1/Main3Activity.java
+--- a/app/src/main/java/com/gap/mobigpk1/Main3Activity.java	(date 1643146581781)
++++ b/app/src/main/java/com/gap/mobigpk1/Main3Activity.java	(date 1643146581781)
+@@ -1,5 +1,6 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.fragment.app.FragmentTransaction;
+ 
+@@ -13,6 +14,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class Main3Activity extends AppCompatActivity {
+     private Button button1,button2,button3;
+@@ -28,15 +32,36 @@
+         String Title = getIntent().getStringExtra("title");
+         title.setText(Title);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++        Yodo1MasBannerAdView bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
+             }
+         });
+-
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        bannerAdView.loadAd();
+ 
+         button1=findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/java/com/gap/mobigpk1/Main4Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/gap/mobigpk1/Main4Activity.java b/app/src/main/java/com/gap/mobigpk1/Main4Activity.java
+--- a/app/src/main/java/com/gap/mobigpk1/Main4Activity.java	(date 1643146581785)
++++ b/app/src/main/java/com/gap/mobigpk1/Main4Activity.java	(date 1643146581785)
+@@ -1,5 +1,6 @@
+ package com.gap.mobigpk1;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.fragment.app.FragmentTransaction;
+ 
+@@ -13,6 +14,9 @@
+ import com.google.android.gms.ads.MobileAds;
+ import com.google.android.gms.ads.initialization.InitializationStatus;
+ import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdListener;
++import com.yodo1.mas.banner.Yodo1MasBannerAdView;
++import com.yodo1.mas.error.Yodo1MasError;
+ 
+ public class Main4Activity extends AppCompatActivity {
+     private Button button1,button2,button3;
+@@ -27,15 +31,36 @@
+         String Title = getIntent().getStringExtra("title");
+         title.setText(Title);
+ 
+-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
++        Yodo1MasBannerAdView bannerAdView = findViewById(R.id.yodo1_mas_banner);
++        bannerAdView.setAdListener(new Yodo1MasBannerAdListener() {
++            @Override
++            public void onBannerAdLoaded(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad finishes loading.
++            }
++
++            @Override
++            public void onBannerAdFailedToLoad(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad request fails.
++            }
++
++            @Override
++            public void onBannerAdOpened(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when an ad opens an overlay that
++                // covers the screen.
++            }
++
+             @Override
+-            public void onInitializationComplete(InitializationStatus initializationStatus) {
++            public void onBannerAdFailedToOpen(Yodo1MasBannerAdView bannerAdView, @NonNull Yodo1MasError error) {
++                // Code to be executed when an ad open fails.
++            }
++
++            @Override
++            public void onBannerAdClosed(Yodo1MasBannerAdView bannerAdView) {
++                // Code to be executed when the user is about to return
++                // to the app after tapping on an ad.
+             }
+         });
+-
+-        mAdView = findViewById(R.id.adView);
+-        AdRequest adRequest = new AdRequest.Builder().build();
+-        mAdView.loadAd(adRequest);
++        bannerAdView.loadAd();
+ 
+         button1=findViewById(R.id.btn1);
+         button1.setOnClickListener(new View.OnClickListener() {
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(date 1643306878048)
++++ b/.idea/misc.xml	(date 1643306878048)
+@@ -12,19 +12,32 @@
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_el21.xml" value="0.24615384615384617" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_main.xml" value="0.264" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_main2.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_main3.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_main4.xml" value="0.25" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_me11.xml" value="0.16875" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_notes_dis.xml" value="0.12708333333333333" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/activity_start.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/book_pdf_btn.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/ce.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/danger.xml" value="0.24358974358974358" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/dialog_layout.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/ee.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/firebase_all.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/firebase_all_btn.xml" value="0.25" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
+-        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_book.xml" value="0.24615384615384617" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_book.xml" value="0.13157894736842105" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_civ1.xml" value="0.6549763033175355" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_el1.xml" value="0.10270270270270271" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_notes.xml" value="0.25" />
+-        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_video.xml" value="0.10400000000000001" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_video.xml" value="0.1" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/fragment_video_dis.xml" value="0.19166666666666668" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/language.xml" value="0.44370860927152317" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/math1a.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/me.xml" value="0.2" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/notes_btn_firebase.xml" value="0.25" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/rv_layout.xml" value="0.25" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/video_btn_firebase.xml" value="0.1" />
++        <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/layout/whole.xml" value="0.16799999999999998" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/menu/hamburger.xml" value="0.24615384615384617" />
+         <entry key="..\:/Users/aman2/AndroidStudioProjects/MObiGPK1/app/src/main/res/menu/search.xml" value="0.2265625" />
+Index: .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_10.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_10.xml b/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_10.xml
+--- a/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_10.xml	(date 1643054263892)
++++ b/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_10.xml	(date 1643054263892)
+@@ -1,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.10" type="kotlin.common">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.10/6b84d926e28493be69daf673e40076f89492ef7/kotlin-stdlib-common-1.5.10.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.10/5b8f86fea035328fc9e8c660773037a3401ce25f/kotlin-stdlib-common-1.5.10-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.10/86ff32fa15b7f66f3b5ced4164c2311c0530adde/kotlin-stdlib-common-1.5.10-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
