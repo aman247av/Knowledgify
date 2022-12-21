@@ -281,6 +281,7 @@ public class HomeFragAdapter extends RecyclerView.Adapter<HomeFragAdapter.HomeFr
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 int spamCount = Integer.parseInt(currentItem.getSpamReports());
                                 spamCount++;
+                                list.remove(position);
                                 holder.tvSpamReport.setClickable(false);
                                 currentItem.setSpamReports(String.valueOf(spamCount));
                                 reference.child(postKey).child("spamReports").setValue(spamCount);
